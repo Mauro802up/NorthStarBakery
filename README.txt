@@ -1,34 +1,29 @@
-NORTH STAR BAKERY - TOUCHSTONE 3
+NORTH STAR BAKERY - TOUCHSTONE 4
 
-This folder is the same four-page website from Touchstone Task 2, now updated
-with one external responsive stylesheet: styles.css.
+This is the updated version of the same North Star Bakery website used in Touchstones 2 and 3.
 
-FILES TO PUT IN YOUR GITHUB REPOSITORY:
-index.html, products.html, about.html, contact.html, styles.css
+WHAT CHANGED:
+- products.html: visitors can save and clear one favorite bakery item.
+- script.js: buttons update the page and localStorage remembers the favorite after refresh.
+- contact.html: visitors can add a saved favorite to the pre-order form.
+- script.js: name, email, request type, details and pre-order pickup date are checked.
+  Errors appear beside their fields; invalid requests are not processed.
+- styles.css: small styles for the new controls and error messages.
 
-REQUIRED SOPHIA BAKERY MEDIA FILES:
-Download the Bakery ZIP on Sophia's Client Scenarios page, then extract these
-files into the SAME FOLDER as the HTML files:
-- bakery-logo.png (optional for this version; text branding is in the header)
-- bakery-storefront.jpg
-- bakery-bread.jpg
-- bakery-signature-loaf.jpg
-- bakery-feature-small.jpg
-- bakery-feature-large.jpg
-- bakery-welcome.mp3
-- bakery-behind-scenes.mp4 (not used; audio used instead)
+IMPORTANT: The form is only a demonstration. It does NOT send messages or take orders.
+Only the favorite product ID is stored locally; personal contact details are not saved.
 
-The official media could not be included here, and the images/audio will not
-load until you add them. Do not rename files, or you must change the HTML paths.
+HOW TO UPDATE GITHUB:
+1. Go to https://github.com/Mauro802up/NorthStarBakery
+2. In the existing main branch, replace products.html, contact.html, index.html,
+   styles.css and README.txt with the versions in this ZIP, and ADD script.js.
+   Keep about.html and all bakery media files. Upload at the repository root.
+3. Open https://mauro802up.github.io/NorthStarBakery/products.html
+   Save a favorite and refresh; it should stay selected.
+4. Visit contact.html, use the favorite in the form, and try submitting with blank fields.
+   Check that errors appear near the fields and are cleared after correction.
+5. Test mobile and desktop views. Check GitHub Pages has published the update.
+6. Then submit only the completed Touchstone 4 Word template to Sophia.
 
-TO FINISH:
-1. Add the Bakery media files listed above from Sophia.
-2. Open index.html to check the page and relative navigation links.
-3. Upload the website files and media to your GitHub repository. Make it public.
-4. Open the site in GitHub Codespaces using a web server, and copy its preview
-   URL (or use GitHub Pages if you publish the site that way).
-5. Add the GitHub repository and working preview links to the Word document.
-6. Review the website at phone and desktop sizes before submitting.
-
-Note: The contact form is a visual class demo and will not send a request without
-a server-side application.
+The screenshots in the Word document were captured from a locally tested copy.
+The public website cannot show the new feature until the files are uploaded.

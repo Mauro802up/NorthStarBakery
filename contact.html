@@ -25,15 +25,21 @@
   <main id="main-content" class="container">
     <h1>Contact and Pre-Orders</h1>
     <p>Have a question or want to plan a pickup? Fill out this form. This class project form is a demo and does not send requests.</p>
+    <div id="saved-favorite-box" class="favorite-prompt" hidden>
+      <p id="saved-favorite-text"></p>
+      <button type="button" id="use-favorite">Use favorite in this request</button>
+    </div>
     <div class="contact-grid">
       <div class="panel">
-        <form action="#" method="post">
+        <form id="request-form" action="#" method="post" novalidate>
           <fieldset>
             <legend>Your Contact Information</legend>
             <p><label for="customer-name">Name:</label>
-              <input type="text" id="customer-name" name="customer-name" autocomplete="name" minlength="2" required></p>
+              <input type="text" id="customer-name" name="customer-name" autocomplete="name" minlength="2" required>
+              <span id="name-error" class="field-error" aria-live="polite"></span></p>
             <p><label for="email">Email:</label>
-              <input type="email" id="email" name="email" autocomplete="email" required></p>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <span id="email-error" class="field-error" aria-live="polite"></span></p>
           </fieldset>
           <fieldset>
             <legend>Tell Us What You Need</legend>
@@ -42,15 +48,19 @@
                 <option value="">Choose one</option>
                 <option value="preorder">Pre-order</option>
                 <option value="question">General question</option>
-              </select></p>
+              </select>
+              <span id="request-error" class="field-error" aria-live="polite"></span></p>
             <p><label for="pickup-date">Pickup date (for pre-orders):</label>
-              <input type="date" id="pickup-date" name="pickup-date"></p>
+              <input type="date" id="pickup-date" name="pickup-date">
+              <span id="pickup-error" class="field-error" aria-live="polite"></span></p>
             <p><label for="details">Item details or question:</label>
-              <textarea id="details" name="details" rows="4" maxlength="500" required></textarea></p>
+              <textarea id="details" name="details" rows="4" maxlength="500" required></textarea>
+              <span id="details-error" class="field-error" aria-live="polite"></span></p>
             <p><label for="allergies">Allergy notes (if any):</label>
               <textarea id="allergies" name="allergies" rows="2" maxlength="250"></textarea></p>
           </fieldset>
-          <button type="submit">Send Request (Demo)</button>
+          <button type="submit">Check Request (Demo)</button>
+          <p id="form-result" class="form-result" role="status" aria-live="polite"></p>
         </form>
       </div>
       <aside class="contact-details panel" aria-label="Bakery information">
@@ -65,5 +75,6 @@
   <footer class="site-footer">
     <p>&copy; 2026 North Star Bakery. Student project.</p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>

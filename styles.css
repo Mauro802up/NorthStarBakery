@@ -1,5 +1,5 @@
-/* North Star Bakery - Touchstone 3
-   Simple mobile-first website styles */
+/* North Star Bakery - Touchstone 4
+   Mobile-first styles from Touchstone 3, with small additions for JavaScript. */
 :root {
   --cream: #FFF8F0;
   --brown: #6B3E26;
@@ -162,3 +162,19 @@ audio { width: 100%; max-width: 500px; }
   .contact-grid > .panel { flex: 2; }
   .contact-details { flex: 1; }
 }
+
+/* Touchstone 4: saved favorites and simple inline form messages. */
+.favorite-panel, .favorite-prompt {
+  border: 2px solid var(--peach);
+  border-radius: .5rem;
+  padding: 1.2rem;
+  margin: 1rem 0 1.5rem;
+}
+.favorite-options { display: flex; flex-wrap: wrap; gap: .6rem; margin: .75rem 0 1rem; }
+.favorite-choice[aria-pressed="true"] { background: var(--peach); color: var(--charcoal); border-color: var(--brown); }
+.favorite-status { font-weight: bold; }
+.secondary-button { background: var(--cream); color: var(--brown); }
+.favorite-panel .button-link { margin-top: .5rem; }
+.field-error { display: block; color: var(--brown); font-size: .92rem; font-weight: bold; margin-top: .2rem; }
+[aria-invalid="true"] { border: 3px solid var(--brown); }
+.form-result { font-weight: bold; margin-top: 1rem; }

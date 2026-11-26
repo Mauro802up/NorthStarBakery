@@ -46,10 +46,22 @@
         <p>Tell us the date and what kind of cake you have in mind.</p>
       </section>
     </div>
-    <p><a class="button-link" href="contact.html">Ask a question or request a pre-order</a></p>
+    <section class="favorite-panel" aria-labelledby="favorites-heading">
+      <h2 id="favorites-heading">Save a Bakery Favorite</h2>
+      <p>Not sure what to order later? Pick one item and we'll remember it on this device.</p>
+      <div class="favorite-options" aria-label="Choose a favorite baked good">
+        <button type="button" class="favorite-choice" data-item="loaf" aria-pressed="false">Signature Loaf</button>
+        <button type="button" class="favorite-choice" data-item="roll" aria-pressed="false">Cinnamon Roll</button>
+        <button type="button" class="favorite-choice" data-item="cake" aria-pressed="false">Celebration Cake</button>
+      </div>
+      <p id="favorite-status" class="favorite-status" role="status" aria-live="polite">No favorite saved yet.</p>
+      <button type="button" id="clear-favorite" class="secondary-button" hidden>Clear favorite</button>
+      <p><a class="button-link" href="contact.html">Ask about your favorite or a pre-order</a></p>
+    </section>
   </main>
   <footer class="site-footer">
     <p>&copy; 2026 North Star Bakery. Student project.</p>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
